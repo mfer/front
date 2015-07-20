@@ -1,0 +1,10 @@
+dentro da pasta src:
+
+para obter o intermediário:
+	java main.Main <tests/exemplo.txt >tmp/exemplo.i
+
+para obter os bytecodes java:
+	java translater.Tradutor tmp/exemplo.i
+	javac exemplo.java
+	rm exemplo.java
+	mv Exemplo.class tmp/

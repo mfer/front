@@ -1,0 +1,11 @@
+dentro da pasta src:
+
+para obter o intermediário:
+	java main.Main <tests/merge.txt >tmp/merge.i
+
+para obter os bytecodes java:
+	java translater.Tradutor tmp/merge.i
+	javac merge.java
+	rm merge.java
+	mv Merge.class tmp/
+

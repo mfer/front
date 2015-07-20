@@ -1,0 +1,35 @@
+
+{
+    int i; int t; int k; int l; int r; int u; int im; 
+    int jm; int km; int[100000] a; int[100000] b; int  n;
+
+    a[1]=886; a[2]=777; a[3]=915; a[4]=793; a[5]=335; 
+    a[6]=386; a[7]=492; a[8]=137; a[9]=53; a[10]=383; n=10; k=1;
+
+    while (k<n) {
+        i=1;
+        while (i+k<=n) {
+            u=i+k*2;
+            if (u>n) u=n+1;
+            l=i; r=i+k; im=l; jm=r; km=l;
+            while (im<r && jm<u) { 
+                if (a[im]<=a[jm]) {b[km]=a[im]; im=im+1;} 
+                else {b[km]=a[jm]; jm=jm+1;}
+                km=km+1;
+            }
+            while (im<r) { 
+                b[km]=a[im]; im=im+1; km=km+1;
+            }
+            while (jm<u) { 
+                b[km]=a[jm]; jm=jm+1; km=km+1;
+            }
+            km=l;
+            while (km<u) { 
+                a[km]=b[km]; 
+                km=km+1;
+            }
+            i=i+k*2;
+        }
+        k=k*2;
+    }
+}
